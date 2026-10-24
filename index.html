@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBlog | Головна</title>
+    <!-- Підключення Bootstrap[cite: 3] -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Навігація[cite: 4] -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="index.html">TECH_BLOG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Головна</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Про нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Контакти</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Карусель[cite: 13] -->
+    <div id="mainCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Tech">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                    <h2>Новинки технологій</h2>
+                    <p>Останні тренди у світі розробки та гаджетів.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Картки з новинами[cite: 10] -->
+    <div class="container mb-5">
+        <div class="row g-4">
+            
+            <!-- Стаття 1 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Огляд нових процесорів</h5>
+                        <p class="card-text">Аналіз продуктивності останнього покоління CPU у важких завданнях та іграх.</p>
+                        <!-- Кнопка, яка відкриває Modal 1[cite: 10] -->
+                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#article1Modal">
+                            Читати статтю
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Стаття 2 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Штучний інтелект</h5>
+                        <p class="card-text">Як нейромережі змінюють підхід до написання коду та автоматизації рутини.</p>
+                        <!-- Кнопка, яка відкриває Modal 2[cite: 10] -->
+                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#article2Modal">
+                            Читати статтю
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Стаття 3 -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Кібербезпека 2026</h5>
+                        <p class="card-text">Головні загрози цього року та базові правила захисту особистих даних у мережі.</p>
+                        <!-- Кнопка, яка відкриває Modal 3[cite: 10] -->
+                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#article3Modal">
+                            Читати статтю
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- БЛОК МОДАЛЬНИХ ВІКОН (самі тексти статей)[cite: 10] -->
+    
+    <!-- Modal 1 -->
+    <div class="modal fade" id="article1Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-info">Огляд нових процесорів</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Нове покоління процесорів приносить значний приріст продуктивності як в однопоточних, так і в багатопоточних задачах. Завдяки переходу на тонший техпроцес вдалося знизити енергоспоживання, зберігши при цьому високі тактові частоти.</p>
+                    <p>Особливо помітний приріст у завданнях рендерингу відео та в сучасних іграх на рушії Unreal Engine 5. Тести показують, що температури тримаються в межах норми навіть під час стрес-тестів на кшталт AIDA64.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="article2Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-info">Штучний інтелект</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Сьогодні ШІ інтегрується майже в кожне IDE. Інструменти автодоповнення коду стали набагато розумнішими — вони не просто продовжують рядок, а можуть згенерувати цілий клас чи функцію за текстовим описом.</p>
+                    <p>Проте розробникам варто бути обережними: згенерований код потрібно ретельно перевіряти на наявність вразливостей, оскільки нейромережі все ще можуть припускатися логічних помилок при побудові складної архітектури.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="article3Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-info">Кібербезпека 2026</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Головним трендом цього року став захист від автоматизованих атак, які також використовують машинне навчання для пошуку вразливостей. Соціальна інженерія залишається вектором номер один.</p>
+                    <p>Базові правила не змінилися: використовуйте двофакторну автентифікацію всюди, де це можливо, генеруйте складні унікальні паролі для різних сервісів та не довіряйте підозрілим листам у пошті. Навіть найнадійніша система вразлива, якщо користувач сам віддає свої дані.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Підключення JS (обов'язково для роботи модалок!)[cite: 3] -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
